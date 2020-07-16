@@ -1,0 +1,182 @@
+:root {
+    --cheese-top-color: #FEE158;
+    --top-hole-color: #FFA718;
+    --cheese-side-color: #F2C13A;
+    --side-hole-color: #E08501;
+  }
+  
+  body{
+    background: #B574E0;
+  }
+  
+  .box-canvas{
+    position: relative;
+    margin: auto;
+    display: block;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    width: 600px;
+    height:600px;
+  }
+  
+  .cheese {
+    position: absolute;
+    overflow: hidden;
+    width: 175px;
+    height: 200px;
+    left: 50%;
+    -webkit-transform: translateX(-50%) ;
+            transform: translateX(-50%) ;
+  }
+  
+  .cheese::after {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 25px;
+    background: #B574E0;
+    border-radius: 50%;
+    right: 45px;
+    top: -15px;
+  }
+  
+  .top {
+    position: absolute;
+  
+    -webkit-transform: translateX(-50%) rotate(2deg);
+  
+            transform: translateX(-50%) rotate(2deg);
+    -webkit-clip-path: polygon(0 100%, 67% 0, 100% 65%);
+            clip-path: polygon(0 100%, 67% 0, 100% 65%);
+    left: 50%;
+    width: 180px;
+    height: 100px;
+    background: var(--cheese-top-color);
+  }
+  
+  .side {
+    position: absolute;
+    top: 81px;
+    left: 50%;
+    width: 176px;
+    height: 100px;
+    background: var(--cheese-side-color);
+    -webkit-transform: translateX(-50%) skew(0, -10deg);
+            transform: translateX(-50%) skew(0, -10deg);
+    overflow: hidden;
+  }
+  
+  .top .hole {
+    position: absolute;
+    background: radial-gradient(
+      circle at bottom right, 
+      var(--top-hole-color), 
+      var(--cheese-top-color)
+    );
+    border-radius: 50%;
+  }
+  
+  .side .hole {
+     position: absolute;
+    background: radial-gradient(
+      circle at top left, 
+      var(--side-hole-color), 
+      var(--cheese-top-color)
+    );
+    border-radius: 50%;
+  }
+  
+  .hole.one {
+    left: 110px;
+    top: 40px;
+    width: 25px;
+    height: 25px;
+  }
+  
+  .hole.two {
+    left: 50px;
+    top: 15px;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(
+      circle at bottom right, 
+      var(--top-hole-color), 
+      25%,
+      var(--cheese-top-color)
+    );
+  }
+  
+  .hole.three {
+    left: 50px;
+    bottom: 0px;
+    width: 50px;
+    height: 30px;
+  }
+  
+  .hole.four {
+    width: 40px;
+    height: 40px;
+    top: 15px;
+    left: 130px;
+  }
+  
+  .hole.five {
+    width: 25px;
+    height: 25px;
+    top: 60px;
+    left: 110px;
+  }
+  
+  .hole.six {
+    width: 48px;
+    height: 30px;
+    top: -15px;
+    left: 47px;
+    background: radial-gradient(
+      circle at top right, 
+      var(--top-hole-color), 
+      var(--cheese-top-color)
+    );
+  }
+  
+  .hole.seven {
+    width: 35px;
+    height: 35px;
+    top: 20px;
+    left: 10px;
+  }
+  
+  .hole.eight {
+    width: 15px;
+    height: 15px;
+    top: 20px;
+    left: 50px;
+  }
+  
+  .hole.nine {
+    width: 15px;
+    height: 15px;
+    top: 90px;
+    left: 50px;
+  }
+  
+  .hole.ten {
+    width: 20px;
+    height: 20px;
+    top: 30px;
+    left: 80px;
+  }
+  
+  .hole.eleven {
+    width: 30px;
+    height: 30px;
+    top: 50px;
+    left: 60px;
+  }
+  
+  .hole.twelve {
+    bottom: 10px;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+  }
